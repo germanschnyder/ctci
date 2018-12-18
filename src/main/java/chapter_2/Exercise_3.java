@@ -1,6 +1,8 @@
 package main.java.chapter_2;
 
-public class Exercise_3 {
+import main.java.ds.LinkedListNode;
+
+public class Exercise_3 extends Chapter2_Exercise{
 
     public boolean deleteNode(LinkedListNode<Integer> node) {
 

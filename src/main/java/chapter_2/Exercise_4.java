@@ -1,6 +1,8 @@
 package main.java.chapter_2;
 
-public class Exercise_4 {
+import main.java.ds.LinkedListNode;
+
+public class Exercise_4 extends Chapter2_Exercise{
 
     public LinkedListNode<Integer> partition(LinkedListNode<Integer> node, int x) {
         LinkedListNode<Integer> lowerStart = null;

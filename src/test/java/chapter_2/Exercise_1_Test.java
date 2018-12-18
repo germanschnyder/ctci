@@ -1,7 +1,8 @@
 package test.java.chapter_2;
 
+import main.java.chapter_2.ExerciseFactory;
 import main.java.chapter_2.Exercise_1;
-import main.java.chapter_2.LinkedListNode;
+import main.java.ds.LinkedListNode;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,7 +10,7 @@ import static org.junit.Assert.assertTrue;
 
 public class Exercise_1_Test {
 
-    private Exercise_1 ex = new Exercise_1();
+    private Exercise_1 ex = (Exercise_1) new ExerciseFactory().getExercise(1, "");
 
     @Test
     public void testNoDuplicates() {

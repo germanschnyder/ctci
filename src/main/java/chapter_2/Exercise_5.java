@@ -1,6 +1,8 @@
 package main.java.chapter_2;
 
-public class Exercise_5 {
+import main.java.ds.LinkedListNode;
+
+public class Exercise_5 extends Chapter2_Exercise{
 
     public LinkedListNode<Integer> sumLists(LinkedListNode<Integer> listA, LinkedListNode<Integer> listB){
         return sumWithCarry(listA, listB, 0);

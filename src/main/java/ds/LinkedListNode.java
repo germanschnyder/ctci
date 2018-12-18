@@ -1,4 +1,4 @@
-package main.java.chapter_2;
+package main.java.ds;
 
 public class LinkedListNode<T> {
     public T data;

@@ -1,9 +1,10 @@
 package main.java.chapter_2;
 
-import java.util.HashSet;
-import java.util.Set;
+import main.java.ds.LinkedListNode;
 
-public class Exercise_1 {
+import java.util.HashSet;
+
+public class Exercise_1 extends Chapter2_Exercise{
 
     public void removeDuplicates(LinkedListNode<Integer> list) {
         HashSet<Integer> buffer = new HashSet<>();

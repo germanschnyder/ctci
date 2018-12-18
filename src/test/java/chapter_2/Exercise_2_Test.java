@@ -1,11 +1,10 @@
 package test.java.chapter_2;
 
 import main.java.chapter_2.Exercise_2;
-import main.java.chapter_2.LinkedListNode;
+import main.java.ds.LinkedListNode;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class Exercise_2_Test {
 
