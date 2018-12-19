@@ -1,18 +1,19 @@
-package com.ctci.chapter_1;
+package com.ctci.common;
 
 public class ExerciseFactory {
 
     @SuppressWarnings("unchecked")
-    public static <T extends Chapter1_Exercise> T getExerciseByName(int number) {
-        return getExerciseByName(number, 0);
+    public static <T extends Exercise> T getExerciseByName(int chapter, int number) {
+        return getExerciseByName(chapter, number, 0);
     }
 
     @SuppressWarnings("unchecked")
-    public static <T extends Chapter1_Exercise> T getExerciseByName(int number, int version) {
+    public static <T extends Exercise> T getExerciseByName(int chapter, int number, int version) {
         String exerciseClassName = version > 0 ?
                 String.format("Exercise_%d_%d", number, version) : String.format("Exercise_%d", number);
 
-        exerciseClassName = ExerciseFactory.class.getPackage().getName() + "." + exerciseClassName;
+        exerciseClassName = String.format("com.ctci.chapter_%d.%s", chapter, exerciseClassName);
+
         try {
             Class<?> clazz = Class.forName(exerciseClassName);
             return (T) clazz.newInstance();

@@ -1,13 +1,14 @@
 package com.ctci.chapter_2;
 
+import com.ctci.common.ExerciseFactory;
 import com.ctci.ds.LinkedListNode;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class Exercise_7_Test {
 
-    private Exercise_7 ex = ExerciseFactory.getExerciseByName(7, 1);
-    private Exercise_7 exv2 = ExerciseFactory.getExerciseByName(7, 2);
+    private Exercise_7_1 ex = ExerciseFactory.getExerciseByName(2,7, 1);
+    private Exercise_7_2 exv2 = ExerciseFactory.getExerciseByName(2, 7, 2);
 
     @Test
     public void testIntersectWithSet() {

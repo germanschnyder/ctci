@@ -1,4 +1,6 @@
 package com.ctci.chapter_1;
 
-public abstract class Chapter1_Exercise {
+import com.ctci.common.Exercise;
+
+public abstract class Chapter1_Exercise extends Exercise {
 }

@@ -1,5 +1,6 @@
 package com.ctci.chapter_2;
 
+import com.ctci.common.ExerciseFactory;
 import com.ctci.ds.LinkedListNode;
 import org.junit.Test;
 
@@ -7,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Exercise_5_Test {
 
-    private Exercise_5 ex = ExerciseFactory.getExerciseByName(5);
+    private Exercise_5 ex = ExerciseFactory.getExerciseByName(2, 5);
 
     @Test
     public void testSumLists() {

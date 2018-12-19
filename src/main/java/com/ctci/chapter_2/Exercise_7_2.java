@@ -2,47 +2,18 @@ package com.ctci.chapter_2;
 
 import com.ctci.ds.LinkedListNode;
 
-import java.util.HashSet;
+public class Exercise_7_2 extends Chapter2_Exercise{
 
-public abstract class Exercise_7 extends Chapter2_Exercise {
+    class TailResult {
+        LinkedListNode node;
+        int length;
 
-    public abstract LinkedListNode<Integer> listIntersection(LinkedListNode<Integer> listA, LinkedListNode<Integer> listB);
-}
-
-
-class Exercise_7_1 extends Exercise_7 {
-
-    @Override
-    public LinkedListNode<Integer> listIntersection(LinkedListNode<Integer> listA, LinkedListNode<Integer> listB) {
-        HashSet set = new HashSet();
-        while (listA.hasNext()) {
-            set.add(listA);
-            listA = listA.next;
+        TailResult(LinkedListNode n, int l) {
+            node = n;
+            length = l;
         }
-        while (listB.hasNext()) {
-            if (set.contains(listB))
-                return listB;
-            else
-                listB = listB.next;
-        }
-
-        return null;
     }
-}
 
-class TailResult {
-    LinkedListNode node;
-    int length;
-
-    TailResult(LinkedListNode n, int l) {
-        node = n;
-        length = l;
-    }
-}
-
-class Exercise_7_2 extends Exercise_7 {
-
-    @Override
     public LinkedListNode<Integer> listIntersection(LinkedListNode<Integer> listA, LinkedListNode<Integer> listB) {
 
         if (listA == null || listB == null) return null;

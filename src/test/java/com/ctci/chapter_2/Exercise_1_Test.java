@@ -1,5 +1,6 @@
 package com.ctci.chapter_2;
 
+import com.ctci.common.ExerciseFactory;
 import com.ctci.ds.LinkedListNode;
 import org.junit.Test;
 
@@ -8,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 
 public class Exercise_1_Test {
 
-    private Exercise_1 ex = ExerciseFactory.getExerciseByName(1);
+    private Exercise_1 ex = ExerciseFactory.getExerciseByName(2, 1);
 
     @Test
     public void testNoDuplicates() {

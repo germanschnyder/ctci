@@ -1,12 +1,13 @@
 package com.ctci.chapter_1;
 
+import com.ctci.common.ExerciseFactory;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class Exercise_7_Test {
 
-    private Exercise_7 ex = ExerciseFactory.getExerciseByName(7);
+    private Exercise_7 ex = ExerciseFactory.getExerciseByName(1, 7);
 
     @Test
     public void testRotate2() {

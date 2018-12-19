@@ -1,5 +1,6 @@
 package com.ctci.chapter_2;
 
+import com.ctci.common.ExerciseFactory;
 import com.ctci.ds.LinkedListNode;
 import org.junit.Test;
 
@@ -7,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Exercise_3_Test {
 
-    private Exercise_3 ex = ExerciseFactory.getExerciseByName(3);
+    private Exercise_3 ex = ExerciseFactory.getExerciseByName(2, 3);
 
     @Test
     public void testDeleteMiddle() {

@@ -1,5 +1,6 @@
 package com.ctci.chapter_2;
 
+import com.ctci.common.ExerciseFactory;
 import com.ctci.ds.LinkedListNode;
 import org.junit.Test;
 
@@ -7,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Exercise_4_Test {
 
-    private Exercise_4 ex = ExerciseFactory.getExerciseByName(4);
+    private Exercise_4 ex = ExerciseFactory.getExerciseByName(2, 4);
 
     @Test
     public void testPartition() {

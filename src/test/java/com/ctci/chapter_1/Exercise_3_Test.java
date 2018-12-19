@@ -1,11 +1,12 @@
 package com.ctci.chapter_1;
 
+import com.ctci.common.ExerciseFactory;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class Exercise_3_Test {
 
-    private Exercise_3 ex = ExerciseFactory.getExerciseByName(3);
+    private Exercise_3 ex = ExerciseFactory.getExerciseByName(1, 3);
 
     @Test
     public void testURLify() {
