@@ -8,12 +8,11 @@ import static org.junit.Assert.assertEquals;
 
 public class Exercise_7_Test {
 
-    private ExerciseFactory factory = new ExerciseFactory();
+    private Exercise_7 ex = ExerciseFactory.getExerciseByName(7, 1);
+    private Exercise_7 exv2 = ExerciseFactory.getExerciseByName(7, 2);
 
     @Test
     public void testIntersectWithSet() {
-
-        Exercise_7 ex = (Exercise_7) factory.getExercise(7, "IntersectWithSet");
 
         int[] dataA = {1, 2, 3, 4, 5};
         LinkedListNode<Integer> listA = LinkedListNode.buildIntegerList(dataA);
@@ -36,8 +35,6 @@ public class Exercise_7_Test {
     @Test
     public void testDoesntIntersectWithSet() {
 
-        Exercise_7 ex = (Exercise_7) factory.getExercise(7, "IntersectWithSet");
-
         int[] dataA = {1, 2, 3, 4, 5};
         LinkedListNode<Integer> listA = LinkedListNode.buildIntegerList(dataA);
 
@@ -54,9 +51,7 @@ public class Exercise_7_Test {
     @Test
     public void testIntersectFromTail() {
 
-        Exercise_7 ex = (Exercise_7) factory.getExercise(7, "IntersectFromTail");
-
-        int[] dataA = {1, 2, 3, 4, 5};
+        int[] dataA = {1, 2, 3, 4, 5, 6};
         LinkedListNode<Integer> listA = LinkedListNode.buildIntegerList(dataA);
         LinkedListNode<Integer> finder = listA.next.next; // stop on 3
 
@@ -68,24 +63,22 @@ public class Exercise_7_Test {
 
         joiner.next = finder;
 
-        LinkedListNode<Integer> result = ex.listIntersection(listA, listB);
+        LinkedListNode<Integer> result = exv2.listIntersection(listA, listB);
 
-        assertEquals("3->4->5->NULL", LinkedListNode.toStringRepresentation(result));
+        assertEquals("3->4->5->6->NULL", LinkedListNode.toStringRepresentation(result));
 
     }
 
     @Test
     public void testDoesntIntersectFromTail() {
 
-        Exercise_7 ex = (Exercise_7) factory.getExercise(7, "IntersectFromTail");
-
-        int[] dataA = {1, 2, 3, 4, 5};
+        int[] dataA = {1, 2, 3, 4, 5, 6};
         LinkedListNode<Integer> listA = LinkedListNode.buildIntegerList(dataA);
 
         int[] dataB = {1, 2, 3};
         LinkedListNode<Integer> listB = LinkedListNode.buildIntegerList(dataB);
 
-        LinkedListNode<Integer> result = ex.listIntersection(listA, listB);
+        LinkedListNode<Integer> result = exv2.listIntersection(listA, listB);
 
         assertEquals("NULL", LinkedListNode.toStringRepresentation(result));
 

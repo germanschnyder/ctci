@@ -1,5 +1,6 @@
 package test.java.chapter_2;
 
+import main.java.chapter_2.ExerciseFactory;
 import main.java.chapter_2.Exercise_4;
 import main.java.ds.LinkedListNode;
 import org.junit.Test;
@@ -8,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Exercise_4_Test {
 
-    private Exercise_4 ex = new Exercise_4();
+    private Exercise_4 ex = ExerciseFactory.getExerciseByName(4);
 
     @Test
     public void testPartition() {

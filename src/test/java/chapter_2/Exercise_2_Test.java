@@ -1,5 +1,6 @@
 package test.java.chapter_2;
 
+import main.java.chapter_2.ExerciseFactory;
 import main.java.chapter_2.Exercise_2;
 import main.java.ds.LinkedListNode;
 import org.junit.Test;
@@ -8,8 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Exercise_2_Test {
 
-    private Exercise_2 ex = new Exercise_2();
-
+    private Exercise_2 ex = ExerciseFactory.getExerciseByName(2);
 
     @Test
     public void testKthToLast() {

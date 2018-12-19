@@ -10,7 +10,7 @@ public abstract class Exercise_7 extends Chapter2_Exercise {
 }
 
 
-class IntersectWithSet extends Exercise_7 {
+class Exercise_7_1 extends Exercise_7 {
 
     @Override
     public LinkedListNode<Integer> listIntersection(LinkedListNode<Integer> listA, LinkedListNode<Integer> listB) {
@@ -40,7 +40,7 @@ class TailResult {
     }
 }
 
-class IntersectFromTail extends Exercise_7 {
+class Exercise_7_2 extends Exercise_7 {
 
     @Override
     public LinkedListNode<Integer> listIntersection(LinkedListNode<Integer> listA, LinkedListNode<Integer> listB) {

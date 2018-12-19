@@ -10,7 +10,7 @@ import static org.junit.Assert.assertTrue;
 
 public class Exercise_1_Test {
 
-    private Exercise_1 ex = (Exercise_1) new ExerciseFactory().getExercise(1, "");
+    private Exercise_1 ex = ExerciseFactory.getExerciseByName(1);
 
     @Test
     public void testNoDuplicates() {

@@ -5,16 +5,16 @@ import main.java.chapter_2.Exercise_8;
 import main.java.ds.LinkedListNode;
 import org.junit.Test;
 
+
 import static org.junit.Assert.assertEquals;
 
 public class Exercise_8_Test {
 
-    private ExerciseFactory factory = new ExerciseFactory();
+    private Exercise_8 ex = ExerciseFactory.getExerciseByName(8, 1);
+    private Exercise_8 exv2 = ExerciseFactory.getExerciseByName(8, 2);
 
     @Test
     public void testFindLoop() {
-
-        Exercise_8 ex = (Exercise_8) factory.getExercise(8, "");
 
         int[] dataA = {1, 2, 3, 4, 5};
         LinkedListNode<Integer> list = LinkedListNode.buildIntegerList(dataA);
@@ -32,8 +32,6 @@ public class Exercise_8_Test {
     @Test
     public void testNoLoop() {
 
-        Exercise_8 ex = (Exercise_8) factory.getExercise(8, "");
-
         int[] dataA = {1, 2, 3, 4, 5};
         LinkedListNode<Integer> list = LinkedListNode.buildIntegerList(dataA);
 
@@ -44,9 +42,7 @@ public class Exercise_8_Test {
     @Test
     public void testFindLoopV2() {
 
-        Exercise_8 ex = (Exercise_8) factory.getExercise(8, "FindLoopWithRunners");
-
-        int[] dataA = {1, 2, 3, 4, 5};
+        int[] dataA = {1, 2, 3, 4, 5, 6};
         LinkedListNode<Integer> list = LinkedListNode.buildIntegerList(dataA);
         LinkedListNode<Integer> loopStart = list.next.next; //start at 3
 
@@ -55,19 +51,16 @@ public class Exercise_8_Test {
 
         runner.next = loopStart;
 
-        assertEquals(loopStart, ex.findLoopStartingNode(list));
-
+        assertEquals(loopStart, exv2.findLoopStartingNode(list));
     }
 
     @Test
     public void testNoLoopV2() {
 
-        Exercise_8 ex = (Exercise_8) factory.getExercise(8, "FindLoopWithRunners");
-
-        int[] dataA = {1, 2, 3, 4, 5};
+        int[] dataA = {1, 2, 3, 4, 5, 6};
         LinkedListNode<Integer> list = LinkedListNode.buildIntegerList(dataA);
 
-        assertEquals(null, ex.findLoopStartingNode(list));
+        assertEquals(null, exv2.findLoopStartingNode(list));
 
     }
 }

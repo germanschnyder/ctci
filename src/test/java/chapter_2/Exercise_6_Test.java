@@ -1,12 +1,13 @@
 package test.java.chapter_2;
 
+import main.java.chapter_2.ExerciseFactory;
 import main.java.chapter_2.Exercise_6;
 import main.java.ds.LinkedListNode;
 import org.junit.Test;
 
 public class Exercise_6_Test {
 
-    private Exercise_6 ex = new Exercise_6();
+    private Exercise_6 ex = ExerciseFactory.getExerciseByName(6);
 
     @Test
     public void testListIsPalindromeOdd() {

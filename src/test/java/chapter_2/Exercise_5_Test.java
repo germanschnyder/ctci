@@ -1,5 +1,6 @@
 package test.java.chapter_2;
 
+import main.java.chapter_2.ExerciseFactory;
 import main.java.chapter_2.Exercise_5;
 import main.java.ds.LinkedListNode;
 import org.junit.Test;
@@ -8,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Exercise_5_Test {
 
-    private Exercise_5 ex = new Exercise_5();
+    private Exercise_5 ex = ExerciseFactory.getExerciseByName(5);
 
     @Test
     public void testSumLists() {

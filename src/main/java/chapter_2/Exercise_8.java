@@ -10,7 +10,7 @@ public abstract class Exercise_8 extends Chapter2_Exercise{
 }
 
 
-class FindLoopWithHashSet extends Exercise_8 {
+class Exercise_8_1 extends Exercise_8 {
     @Override
     public LinkedListNode<Integer> findLoopStartingNode(LinkedListNode<Integer> list) {
        HashSet set = new HashSet();
@@ -25,14 +25,14 @@ class FindLoopWithHashSet extends Exercise_8 {
     }
 }
 
-class FindLoopWithRunners extends Exercise_8 {
+class Exercise_8_2 extends Exercise_8 {
     @Override
     public LinkedListNode<Integer> findLoopStartingNode(LinkedListNode<Integer> list) {
 
         LinkedListNode slow = list;
         LinkedListNode fast = list;
 
-        while (fast != null && fast.next != null){
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
 
@@ -45,7 +45,7 @@ class FindLoopWithRunners extends Exercise_8 {
 
         slow = list;
 
-        while (slow != fast){
+        while (slow != fast) {
             slow = slow.next;
             fast = fast.next;
         }

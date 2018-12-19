@@ -1,5 +1,6 @@
 package test.java.chapter_2;
 
+import main.java.chapter_2.ExerciseFactory;
 import main.java.chapter_2.Exercise_3;
 import main.java.ds.LinkedListNode;
 import org.junit.Test;
@@ -8,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Exercise_3_Test {
 
-    private Exercise_3 ex = new Exercise_3();
+    private Exercise_3 ex = ExerciseFactory.getExerciseByName(3);
 
     @Test
     public void testDeleteMiddle() {
