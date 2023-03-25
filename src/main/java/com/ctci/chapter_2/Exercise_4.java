@@ -2,7 +2,7 @@ package com.ctci.chapter_2;
 
 import com.ctci.ds.LinkedListNode;
 
-public class Exercise_4 extends Chapter2_Exercise{
+public class Exercise_4 extends Chapter2_Exercise {
 
     public LinkedListNode<Integer> partition(LinkedListNode<Integer> node, int x) {
         LinkedListNode<Integer> lowerStart = null;
@@ -10,8 +10,9 @@ public class Exercise_4 extends Chapter2_Exercise{
         LinkedListNode<Integer> greaterStart = null;
         LinkedListNode<Integer> greaterEnd = null;
 
-        while (node.hasNext()) {
+        while (node != null) {
             LinkedListNode<Integer> next = node.next;
+            node.next = null;
             if (node.data < x) { // elem is lower than x
                 if (lowerStart == null) {
                     lowerStart = node;
@@ -31,14 +32,14 @@ public class Exercise_4 extends Chapter2_Exercise{
 
             }
 
-            node = node.next;
+            node = next;
         }
 
-        if (lowerEnd != null) {
-            lowerEnd.next = greaterStart;
-            return lowerStart;
-        } else {
-            return greaterStart;
-        }
+        if (lowerStart == null) return greaterStart;
+
+
+        lowerEnd.next = greaterStart;
+        return lowerStart;
+
     }
 }
